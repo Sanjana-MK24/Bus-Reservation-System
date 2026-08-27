@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Welcome to Easy Bus Booking 🚍</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to top, #89f7fe 0%, #66a6ff 100%);
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: #fff;
+    }
+
+    .sky {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70%;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .cloud {
+      position: absolute;
+      background: #fff;
+      border-radius: 50%;
+      opacity: 0.7;
+      animation: cloudMove 60s linear infinite;
+    }
+
+    .cloud1 { width: 120px; height: 60px; top: 50px; left: -200px; }
+    .cloud2 { width: 180px; height: 80px; top: 100px; left: -300px; animation-delay: 20s; }
+    .cloud3 { width: 100px; height: 50px; top: 150px; left: -150px; animation-delay: 40s; }
+
+    @keyframes cloudMove {
+      from { transform: translateX(0); }
+      to { transform: translateX(120vw); }
+    }
+
+    .road {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 150px;
+      background: #333;
+      z-index: 0;
+    }
+
+    .road::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: #fff;
+      background: repeating-linear-gradient(
+        to right,
+        #fff,
+        #fff 40px,
+        transparent 40px,
+        transparent 80px
+      );
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+
+    .bus {
+      font-size: 5em;
+      position: absolute;
+      bottom: 100px;
+      left: -100px;
+      animation: driveBus 10s linear infinite;
+    }
+
+    @keyframes driveBus {
+      0% { left: -100px; }
+      100% { left: 110%; }
+    }
+
+    .welcome-card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      padding: 40px 60px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+      text-align: center;
+      z-index: 2;
+    }
+
+    .welcome-card h1 {
+      margin: 0 0 20px 0;
+      font-size: 3em;
+    }
+
+    .welcome-card p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      max-width: 500px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .actions a {
+      text-decoration: none;
+      padding: 15px 40px;
+      background: #007BFF;
+      color: #fff;
+      border-radius: 50px;
+      font-size: 1.1em;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .actions a:hover {
+      background: #0056b3;
+      transform: translateY(-3px);
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 0.85em;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="sky">
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+  </div>
+
+  <div class="road"></div>
+  <div class="bus">🚌</div>
+
+  <div class="welcome-card">
+    <h1>Start Your Journey!🚍</h1>
+    <p>Book your seat easily, pay securely, and travel comfortably with Easy Bus Booking. Let’s get you moving!</p>
+    <div class="actions">
+      <a href="{{ url_for('passenger') }}">🎟️ Passenger Portal</a>
+      <a href="{{ url_for('login') }}">🔑 Admin Login</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Easy Bus Booking | Happy Travels! 🚌✨
+  </div>
+</body>
+</html>

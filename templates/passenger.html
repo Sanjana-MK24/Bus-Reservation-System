@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Passenger Portal</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 50px 20px;
+      color: #333;
+    }
+
+    h1 {
+      color: #fff;
+      font-size: 3em;
+      margin-bottom: 30px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .passenger-card {
+      background: linear-gradient(135deg, #ffffff 0%, #e8f7ff 100%);
+      padding: 40px;
+      max-width: 550px;
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+      position: relative;
+      overflow: hidden;
+      border: 2px solid #a1c4fd;
+    }
+
+    .passenger-card::before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      background: #7eb6f5;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      opacity: 0.1;
+    }
+
+    .passenger-card::after {
+      content: "";
+      position: absolute;
+      bottom: -50px;
+      left: -50px;
+      background: #a1c4fd;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      opacity: 0.1;
+    }
+
+    label {
+      display: block;
+      margin-top: 18px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px 15px;
+      margin-top: 8px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 1em;
+      transition: border 0.3s, box-shadow 0.3s;
+    }
+
+    input:focus {
+      border-color: #4facfe;
+      box-shadow: 0 0 8px rgba(79, 172, 254, 0.4);
+      outline: none;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    button {
+      flex: 1;
+      background: #4facfe;
+      color: #fff;
+      padding: 12px 0;
+      border: none;
+      border-radius: 50px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background: #00c6fb;
+      transform: translateY(-2px);
+    }
+
+    .message {
+      background: #ffffffdd;
+      padding: 15px 20px;
+      margin-top: 25px;
+      border-radius: 8px;
+      font-weight: bold;
+      max-width: 550px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .results {
+      background: #fff;
+      margin-top: 40px;
+      max-width: 650px;
+      width: 100%;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    }
+
+    .results h2 {
+      margin-top: 0;
+      color: #4facfe;
+    }
+
+    .results ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .results li {
+      background: #f5f7fa;
+      padding: 12px 20px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+
+    .results li::before {
+      content: "🚌 ";
+    }
+  </style>
+</head>
+<body>
+  <h1>🚍 Passenger Portal</h1>
+
+  <div class="passenger-card">
+    <form method="POST">
+      <label>Bus Number:</label>
+      <input type="number" name="bus_no" required>
+
+      <label>Source:</label>
+      <input type="text" name="source" required>
+
+      <label>Destination:</label>
+      <input type="text" name="destination" required>
+
+      <label>Name:</label>
+      <input type="text" name="name" required>
+
+      <label>Seat Number:</label>
+      <input type="number" name="seat_no" required>
+
+      <div class="buttons">
+        <button type="submit" name="action" value="Book">Book Ticket</button>
+        <button type="submit" name="action" value="Cancel">Cancel Ticket</button>
+        <button type="submit" name="action" value="Search">Search Buses</button>
+      </div>
+    </form>
+  </div>
+
+  {% if message %}
+    <div class="message">{{ message }}</div>
+  {% endif %}
+
+  {% if results %}
+    <div class="results">
+      <h2>Available Buses</h2>
+      <ul>
+        {% for bus in results %}
+          <li>Bus {{ bus.bus_no }}: {{ bus.source.capitalize() }} → {{ bus.destination.capitalize() }}, Seats: {{ bus.seats }}, Booked: {{ bus.booked_seats|length }}, Waiting: {{ bus.waiting_list|length }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+</body>
+</html>

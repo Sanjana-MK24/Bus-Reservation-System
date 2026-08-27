@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Payment Success</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .success-box {
+      background: #ffffff;
+      padding: 50px 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+    }
+    h1 {
+      color: #28a745;
+      margin-bottom: 15px;
+      font-size: 2em;
+    }
+    p {
+      font-size: 1.1em;
+      color: #333;
+      margin: 10px 0;
+      line-height: 1.4em;
+    }
+    a.download {
+      display: inline-block;
+      background: #007BFF;
+      color: #fff;
+      padding: 12px 35px;
+      text-decoration: none;
+      border-radius: 50px;
+      margin-top: 25px;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
+    }
+    a.download:hover {
+      background: #0056b3;
+      transform: translateY(-2px);
+    }
+    a.home {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #007BFF;
+      font-weight: bold;
+      transition: color 0.2s;
+    }
+    a.home:hover {
+      color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="success-box">
+    <h1>✅ Payment Successful!</h1>
+    <p>{{ message }}</p>
+
+    {% if amount %}
+      <p><strong>Amount Paid:</strong> ₹{{ amount }}</p>
+    {% endif %}
+
+    {% if download_link %}
+      <a class="download" href="{{ download_link }}">Download Ticket</a>
+    {% else %}
+      <p style="color:red;">❌ Ticket not available for download.</p>
+    {% endif %}
+
+    <br>
+    <a class="home" href="{{ url_for('index') }}">← Back to Home</a>
+  </div>
+</body>
+</html>

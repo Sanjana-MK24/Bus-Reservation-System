@@ -1,0 +1,446 @@
+[
+    {
+        "bus_no": 101,
+        "source": "delhi",
+        "destination": "agra",
+        "seats": 5,
+        "booked_seats": {
+            "1": "Alice",
+            "2": "Bob"
+        },
+        "waiting_list": [
+            "Charlie"
+        ]
+    },
+    {
+        "bus_no": 102,
+        "source": "mumbai",
+        "destination": "pune",
+        "seats": 5,
+        "booked_seats": {},
+        "waiting_list": []
+    },
+    {
+        "bus_no": 102,
+        "source": "davangere",
+        "destination": "mysuru",
+        "seats": 5,
+        "booked_seats": {
+            "3": "Rajini"
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 101,
+        "source": "gadag",
+        "destination": "davangere",
+        "seats": 5,
+        "booked_seats": {
+            "1": "appu",
+            "2": "pavitra"
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 101,
+        "source": "banglore",
+        "destination": "davangere",
+        "seats": 5,
+        "booked_seats": {
+            "2": "gyyy",
+            "1": "nishu"
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 103,
+        "source": "gadag",
+        "destination": "banglore",
+        "seats": 5,
+        "booked_seats": {
+            "5": "sanj"
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 111,
+        "source": "gadag",
+        "destination": "hubli",
+        "seats": 5,
+        "booked_seats": {
+            "4": "sanjana"
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 109,
+        "source": "gadag",
+        "destination": "dharwad",
+        "seats": 5,
+        "booked_seats": {
+            "3": "pavan"
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 121,
+        "source": "hubli",
+        "destination": "banglore",
+        "seats": 5,
+        "booked_seats": {
+            "2": "rishi"
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 102,
+        "source": "hubli",
+        "destination": "banglore",
+        "seats": 5,
+        "booked_seats": {},
+        "waiting_list": []
+    },
+    {
+        "bus_no": 102,
+        "source": "hubli",
+        "destination": "dharwad",
+        "seats": 5,
+        "booked_seats": {},
+        "waiting_list": []
+    },
+    {
+        "bus_no": 101,
+        "source": "gadag",
+        "destination": "dharwad",
+        "seats": 5,
+        "booked_seats": {
+            "4": ""
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 101,
+        "source": "hubli",
+        "destination": "banglore",
+        "seats": 5,
+        "booked_seats": {
+            "5": "dhruva"
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 101,
+        "source": "hubli",
+        "destination": "davangere",
+        "seats": 5,
+        "booked_seats": {
+            "3": "manu"
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 101,
+        "source": "shivamogga",
+        "destination": "hubli",
+        "seats": 5,
+        "booked_seats": {
+            "1": "raghu"
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 101,
+        "source": "gadag",
+        "destination": "hubli",
+        "seats": 5,
+        "booked_seats": {
+            "2": "nishu",
+            "3": "raghu",
+            "4": "rishi",
+            "5": "manu",
+            "1": "pavvu"
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 101,
+        "source": "hassan",
+        "destination": "mysore",
+        "seats": 5,
+        "booked_seats": {
+            "5": "appu"
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 108,
+        "source": "gadag",
+        "destination": "davangere",
+        "seats": 5,
+        "booked_seats": {
+            "1": "sanjana"
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 108,
+        "source": "banglore",
+        "destination": "hubli",
+        "seats": 5,
+        "booked_seats": {
+            "4": "rishi"
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 121,
+        "source": "gadag",
+        "destination": "davangere",
+        "seats": 5,
+        "booked_seats": {
+            "1": "sanj"
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 121,
+        "source": "gadag",
+        "destination": "banglore",
+        "seats": 5,
+        "booked_seats": {
+            "4": "appu"
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 106,
+        "source": "banglore",
+        "destination": "hubli",
+        "seats": 5,
+        "booked_seats": {
+            "2": "manu"
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 105,
+        "source": "gadag",
+        "destination": "mysore",
+        "seats": 5,
+        "booked_seats": {
+            "1": "appu"
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 1,
+        "source": "gadag",
+        "destination": "hubli",
+        "seats": 5,
+        "booked_seats": {
+            "1": "adhiti"
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 1,
+        "source": "hassan",
+        "destination": "hubli",
+        "seats": 5,
+        "booked_seats": {
+            "2": "rishi"
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 2,
+        "source": "gadag",
+        "destination": "dharwad",
+        "seats": 5,
+        "booked_seats": {
+            "3": "sanjana"
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 4,
+        "source": "hubli",
+        "destination": "davangere",
+        "seats": 5,
+        "booked_seats": {},
+        "waiting_list": []
+    },
+    {
+        "bus_no": 17,
+        "source": "hubli",
+        "destination": "banglore",
+        "seats": 5,
+        "booked_seats": {
+            "5": "manu"
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 1,
+        "source": "gadag",
+        "destination": "mysore",
+        "seats": 5,
+        "booked_seats": {
+            "4": "sanj",
+            "2": "appu"
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 9,
+        "source": "bidar",
+        "destination": "hubli",
+        "seats": 5,
+        "booked_seats": {
+            "3": "Rishi"
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 1,
+        "source": "gadag",
+        "destination": "davangere",
+        "seats": 5,
+        "booked_seats": {
+            "1": "gyyy",
+            "2": "manu",
+            "3": "rishi",
+            "4": "appu",
+            "5": "sanjana"
+        },
+        "waiting_list": [
+            "sanjana",
+            "sanjana",
+            "Dhruva"
+        ]
+    },
+    {
+        "bus_no": 12,
+        "source": "gadag",
+        "destination": "banglore",
+        "seats": 5,
+        "booked_seats": {
+            "2": "rishi"
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 1,
+        "source": "hubli",
+        "destination": "banglore",
+        "seats": 5,
+        "booked_seats": {
+            "4": "sanjana"
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 23,
+        "source": "gadag",
+        "destination": "mysore",
+        "seats": 5,
+        "booked_seats": {},
+        "waiting_list": []
+    },
+    {
+        "bus_no": 54,
+        "source": "hubli",
+        "destination": "gadag",
+        "seats": 5,
+        "booked_seats": {},
+        "waiting_list": []
+    },
+    {
+        "bus_no": 32,
+        "source": "gadag",
+        "destination": "dharwad",
+        "seats": 5,
+        "booked_seats": {},
+        "waiting_list": []
+    },
+    {
+        "bus_no": 87,
+        "source": "gadag",
+        "destination": "banglore",
+        "seats": 5,
+        "booked_seats": {
+            "3": "manu"
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 21,
+        "source": "gadag",
+        "destination": "dharwad",
+        "seats": 5,
+        "booked_seats": {
+            "4": "rishi"
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 65,
+        "source": "gadag",
+        "destination": "mysore",
+        "seats": 5,
+        "booked_seats": {
+            "2": "gyyy"
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 12586,
+        "source": "gadag",
+        "destination": "hubli",
+        "seats": 5,
+        "booked_seats": {
+            "3": "yashoda"
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 1,
+        "source": "gadag",
+        "destination": "delhi",
+        "seats": 5,
+        "booked_seats": {
+            "1": "gyyy"
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 10,
+        "source": "gadag",
+        "destination": "banglore",
+        "seats": 5,
+        "booked_seats": {
+            "3": "manu"
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 4,
+        "source": "gadag",
+        "destination": "mysore",
+        "seats": 5,
+        "booked_seats": {
+            "3": "chotu"
+        },
+        "waiting_list": []
+    },
+    {
+        "bus_no": 3,
+        "source": "hubli",
+        "destination": "gadag",
+        "seats": 5,
+        "booked_seats": {
+            "5": "manu"
+        },
+        "waiting_list": []
+    }
+]
